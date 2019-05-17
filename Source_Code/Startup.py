@@ -34,7 +34,7 @@ __status__ = 'Production'
 
 def main():
     # ↓ Displays the welcome message to the user.
-    print 'System startup script had been intitaied.'
+    print('System startup script had been intitaied.')
     timeNow = datetime.datetime.now()  # Getting the current date and time.
     # ↓ Formatting the date and time to become a string.
     timeNowString = timeNow.strftime('%m/%d/%Y, %H:%M:%S')
@@ -43,9 +43,9 @@ def main():
     string = (user, ' Logged in at ', timeNowString)
     # ↓ Joinging together the Tuple 'string' into a str.
     strinWritabele = ''.join(string)
-    print string  # Prints 'string'
+    print(string)  # Prints 'string'
     time.sleep(1)  # Pauses the application for 1 sec.
-    print 'Data is being written to file.'
+    print('Data is being written to file.')
     try:  # Try the below unless excpetion occurs then jump to except.
         f = open('logOnLog.txt', 'a')  # Defines a new object for the file.
         f.write(strinWritabele)  # Writes a string to the opbect.
@@ -54,12 +54,12 @@ def main():
 
                 # If an exception occurs run the below code.
         # ↓ Informing the user of the error.
-        print 'There was an issue writting to the file.'
-        print e  # Print the error details.
+        print('There was an issue writting to the file.')
+        print(e)  # Print the error details.
         time.sleep(100)  # Pauses the application for 100 seconds.
         sys.exit()  # Exits the application cleanily.
     # ↓ Inform the user that the application has run sucessfully.
-    print 'All worked well.'
+    print('All worked well.')
     time.sleep(0.5)  # Pause the application for 1/2 a sec.
     sys.exit()  # Exits the application cleanily.
 
