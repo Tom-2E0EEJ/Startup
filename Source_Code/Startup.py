@@ -50,7 +50,7 @@ def main():
         f = open('logOnLog.txt', 'a')  # Defines a new object for the file.
         f.write(strinWritabele)  # Writes a string to the opbect.
         f.close  # Closes the file object.
-    except Exception, e:
+    except Exception as e:
 
                 # If an exception occurs run the below code.
         # ↓ Informing the user of the error.
